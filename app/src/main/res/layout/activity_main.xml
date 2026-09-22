@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="114dp"
         android:layout_height="41dp"
-        android:text="pizza bestel app"
+        android:text="pizza bestel app #notascam"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
