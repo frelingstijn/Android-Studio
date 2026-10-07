@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCF596"
     tools:context=".MainActivity2">
 
 
@@ -12,9 +13,44 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginBottom="60dp"
+        android:text="back"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FF9C73"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/newPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="new password"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/newPassword2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter new password"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="@+id/newPassword"
+        app:layout_constraintStart_toStartOf="@+id/newPassword"
+        app:layout_constraintTop_toBottomOf="@+id/newPassword" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="confirm"
+        app:layout_constraintEnd_toEndOf="@+id/newPassword2"
+        app:layout_constraintStart_toStartOf="@+id/newPassword2"
+        app:layout_constraintTop_toBottomOf="@+id/newPassword2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,5 +23,10 @@ class MainActivity2 : AppCompatActivity() {
         back.setOnClickListener {
             finish()
         }
+        val newPassword = findViewById<Button>(R.id.confirm)
+        newPassword.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

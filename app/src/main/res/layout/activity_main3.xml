@@ -5,13 +5,127 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FCF596"
     tools:context=".MainActivity3">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="150dp"
-        tools:layout_editor_absoluteY="99dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity3"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <EditText
+            android:id="@+id/createEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:hint="enter email"
+            android:inputType="text|textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/createPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="enter password"
+            android:inputType="text|textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/createEmail"
+            app:layout_constraintStart_toStartOf="@+id/createEmail"
+            app:layout_constraintTop_toBottomOf="@+id/createEmail" />
+
+        <EditText
+            android:id="@+id/HomeAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="home address"
+            android:inputType="text|textPostalAddress"
+            app:layout_constraintEnd_toEndOf="@+id/createPassword"
+            app:layout_constraintStart_toStartOf="@+id/createPassword"
+            app:layout_constraintTop_toBottomOf="@+id/createPassword" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="first name"
+            android:inputType="text|textPersonName|textCapWords"
+            app:layout_constraintEnd_toEndOf="@+id/HomeAddress"
+            app:layout_constraintStart_toStartOf="@+id/HomeAddress"
+            app:layout_constraintTop_toBottomOf="@+id/HomeAddress" />
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="last name"
+            android:inputType="text|textPersonName|textCapWords"
+            app:layout_constraintEnd_toEndOf="@+id/firstName"
+            app:layout_constraintStart_toStartOf="@+id/firstName"
+            app:layout_constraintTop_toBottomOf="@+id/firstName" />
+
+        <EditText
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="age"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/lastName"
+            app:layout_constraintStart_toStartOf="@+id/lastName"
+            app:layout_constraintTop_toBottomOf="@+id/lastName" />
+
+        <EditText
+            android:id="@+id/creditCardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="credit card number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/age"
+            app:layout_constraintStart_toStartOf="@+id/age"
+            app:layout_constraintTop_toBottomOf="@+id/age" />
+
+        <EditText
+            android:id="@+id/creditCardControlNumber"
+            android:layout_width="225dp"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:hint="credit card control number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/creditCardNumber"
+            app:layout_constraintStart_toStartOf="@+id/creditCardNumber"
+            app:layout_constraintTop_toBottomOf="@+id/creditCardNumber" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="phone number"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/creditCardControlNumber"
+            app:layout_constraintStart_toStartOf="@+id/creditCardControlNumber"
+            app:layout_constraintTop_toBottomOf="@+id/creditCardControlNumber" />
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:text="confirm"
+            app:layout_constraintEnd_toEndOf="@+id/phoneNumber"
+            app:layout_constraintStart_toStartOf="@+id/phoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
