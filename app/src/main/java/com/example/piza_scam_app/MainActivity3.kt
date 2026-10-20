@@ -2,6 +2,7 @@ package com.example.piza_scam_app
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.ContactsContract.CommonDataKinds.Email
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -23,5 +24,8 @@ class MainActivity3 : AppCompatActivity() {
             val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
+        
+        val Email = intent.getStringExtra("Email").toString()
+
     }
 }

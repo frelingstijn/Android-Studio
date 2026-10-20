@@ -1,5 +1,6 @@
 package com.example.piza_scam_app
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -17,10 +18,12 @@ class MainActivity4 : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val back = findViewById<Button>(R.id.back)
-        back.setOnClickListener {
-            finish()
+        val logOut = findViewById<Button>(R.id.logout)
+        logOut.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
+
 
     }
 }
