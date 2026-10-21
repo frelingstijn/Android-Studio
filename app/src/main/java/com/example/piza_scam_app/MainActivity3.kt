@@ -24,8 +24,6 @@ class MainActivity3 : AppCompatActivity() {
             val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
-        
-        val Email = intent.getStringExtra("Email").toString()
 
     }
 }

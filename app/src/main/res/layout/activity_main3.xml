@@ -121,6 +121,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
+            android:backgroundTint="#FF9C73"
             android:text="confirm"
             app:layout_constraintEnd_toEndOf="@+id/phoneNumber"
             app:layout_constraintStart_toStartOf="@+id/phoneNumber"
