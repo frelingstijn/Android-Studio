@@ -24,16 +24,16 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity4::class.java)
             startActivity(intent)
         }
+        val forgotPassword = findViewById<Button>(R.id.forgotPassword)
+        forgotPassword.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
+        }
         val createAccount = findViewById<Button>(R.id.createaccount)
         createAccount.setOnClickListener {
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
-        val forgotpassword = findViewById<Button>(R.id.forgotPassword)
-        forgotpassword.setOnClickListener {
-            val intent = Intent(this, MainActivity2::class.java)
-            
-            startActivity(intent)
-        }
+
     }
 }
