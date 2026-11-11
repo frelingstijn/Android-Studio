@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
 import android.widget.Toast
 import android.content.Intent
+import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,10 +20,28 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+
+
         val login = findViewById<Button>(R.id.buttonlogin)
         login.setOnClickListener {
             val intent = Intent(this, MainActivity4::class.java)
-            startActivity(intent)
+
+            val emailLogin = findViewById<EditText>(R.id.editTextTextEmailAddress)
+
+            val passwordLogin = findViewById<EditText>(R.id.editTextTextPassword)
+
+            val data = getSharedPreferences(emailLogin.toString(), MODE_PRIVATE)
+
+           val Password = data.getString("password", passwordLogin.toString())
+
+            if (passwordLogin.text.toString().isNotBlank()){
+                if (Password == passwordLogin.text.toString()){
+                    startActivity(intent)
+                }
+            }
+
+
         }
         val forgotPassword = findViewById<Button>(R.id.forgotPassword)
         forgotPassword.setOnClickListener {
@@ -34,6 +53,8 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MainActivity3::class.java)
             startActivity(intent)
         }
+
+
 
     }
 }

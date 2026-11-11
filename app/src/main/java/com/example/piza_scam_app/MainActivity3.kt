@@ -48,7 +48,7 @@ class MainActivity3 : AppCompatActivity() {
 
         confirm.setOnClickListener {
 
-
+            val intent = Intent(this, MainActivity4::class.java)
 
             if (email.text.toString().isBlank()){
                 Toast.makeText(this, "vul een email in.", Toast.LENGTH_SHORT).show()
@@ -103,11 +103,26 @@ class MainActivity3 : AppCompatActivity() {
             } else {
                 data.edit().putString("phoneNumber", phoneNumber.toString()).apply()
             }
+            if (email.text.toString().isNotBlank()){
+                if (password.text.toString().isNotBlank()){
+                    if (homeAddress.text.toString().isNotBlank()){
+                        if (firstName.text.toString().isNotBlank()){
+                            if (lastName.text.toString().isNotBlank()){
+                                if (age.text.toString().isNotBlank()){
+                                    if (creditCardNumber.text.toString().isNotBlank()){
+                                        if (creditCardControlNumber.text.toString().isNotBlank()){
+                                            if (phoneNumber.text.toString().isNotBlank()){
+                                                startActivity(intent)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
-            val intent = Intent(this, MainActivity4::class.java)
-
-
-            startActivity(intent)
         }
     }
 }
